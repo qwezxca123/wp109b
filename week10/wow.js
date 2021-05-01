@@ -37,11 +37,13 @@ class Vector
 
     neg()
     {
+        var a = []
         for(var i in this.value)
         {
-            if(this.value[i]>0) this.value[i] *= -1
+            if(this.value[i]>0) a[i] = this.value[i] * -1
+            else a[i] = this.value[i]
         }
-        return this
+        return new Vector(a)
     }
 
 }
