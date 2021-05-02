@@ -25,12 +25,12 @@ class Vector
         return new Vector(a)
     }
 
-    dot()
+    dot(v)
     {
-        var j = 1
-        for(var i of this.value)
+        var j = 0
+        for(var i in this.value)
         {
-            j *= i
+            j += this.value[i] * v.value[i] 
         }
         return j
     }
@@ -55,5 +55,5 @@ console.log("v1=",v1);
 console.log("v2=",v2);
 console.log("v1.add(v2)=",v1.add(v2));
 console.log("v1.sub(v2)=",v1.sub(v2));
-console.log("v1.dot()=",v1.dot());
+console.log("v1.dot(v2)=",v1.dot(v2));
 console.log("v1.neg()=",v1.neg());
